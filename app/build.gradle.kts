@@ -64,6 +64,8 @@ android {
     packaging {
         jniLibs {
             useLegacyPackaging = false
+            doNotStrip("**/libbarhopper_v3.so")
+            doNotStrip("**/libimage_processing_util_jni.so")
         }
     }
 

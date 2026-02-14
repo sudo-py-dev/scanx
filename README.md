@@ -13,13 +13,13 @@ ScanX makes QR scanning fast, simple, and actually enjoyable. Built with the lat
 - **Privacy First**: No sneaky permissions. Your data stays on your device, exactly where it belongs.
 - **Talks Your Language**: Fully support English, Hebrew, and 8 other languages.
 
-## � Setup
+## 🛠️ Setup
 
 Getting started is easy:
 
-1. Clone this repo.
-2. Open it in Android Studio.
-3. Hit "Run" and start scanning!
+1. Clone this repo: `git clone https://github.com/sudo-py-dev/scanx.git`
+2. Open the project in Android Studio.
+3. Sync Gradle and hit "Run"!
 
 ---
 
@@ -36,13 +36,13 @@ ScanX הופכת את סריקת ה-QR לחוויה מהירה, פשוטה וב�
 - **פרטיות מעל הכל**: בלי הרשאות מיותרות. המידע שלכם נשאר על המכשיר שלכם, בדיוק איפה שהוא צריך להיות.
 - **מדבר בשפה שלכם**: תמיכה מלאה בעברית, אנגלית ועוד 8 שפות נוספות.
 
-## � איך מתקינים?
+## 🛠️ איך מתקינים?
 
 זה ממש פשוט:
 
-1. משכפלים את המאגר (Clone).
+1. משכפלים את המאגר: `git clone https://github.com/sudo-py-dev/scanx.git`
 2. פותחים ב-Android Studio.
-3. לוחצים על "Run" ומתחילים לסרוק!
+3. מבצעים Gradle Sync, לוחצים על "Run" ומתחילים לסרוק!
 
 ---
 

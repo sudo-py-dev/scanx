@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <color name="primary">#38BDF8</color>
+    <color name="onPrimary">#0F172A</color>
+    <color name="primaryContainer">#0369A1</color>
+    <color name="onPrimaryContainer">#E0F2FE</color>
+    <color name="secondary">#818CF8</color>
+    <color name="onSecondary">#1E1B4B</color>
+    <color name="secondaryContainer">#312E81</color>
+    <color name="onSecondaryContainer">#E0E7FF</color>
+    <color name="tertiary">#FB7185</color>
+    <color name="onTertiary">#4C0519</color>
+    <color name="tertiaryContainer">#881337</color>
+    <color name="onTertiaryContainer">#FFE4E6</color>
+    <color name="error">#F87171</color>
+    <color name="onError">#450A0A</color>
+    <color name="errorContainer">#991B1B</color>
+    <color name="onErrorContainer">#FEE2E2</color>
+    <color name="background">#0F172A</color>
+    <color name="onBackground">#E2E8F0</color>
+    <color name="surface">#0F172A</color>
+    <color name="onSurface">#E2E8F0</color>
+    <color name="surfaceVariant">#1E293B</color>
+    <color name="onSurfaceVariant">#94A3B8</color>
+    <color name="outline">#475569</color>
+    <color name="outlineVariant">#334155</color>
+    <color name="surfaceContainerLow">#172554</color>
+    <color name="surfaceContainerHigh">#334155</color>
+    <color name="success_green">#4ADE80</color>
+    <color name="bg_gradient_start">#0F172A</color>
+    <color name="bg_gradient_center">#1E293B</color>
+    <color name="bg_gradient_end">#0F172A</color>
+</resources>

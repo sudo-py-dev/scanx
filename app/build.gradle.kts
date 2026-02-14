@@ -84,8 +84,8 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
     implementation("androidx.camera:camera-view:$cameraxVersion")
 
-    // ML Kit Barcode Scanning (Play Services - for smaller APK size)
-    implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0")
+    // ML Kit Barcode Scanning (Independent/Bundled - works without Play Services)
+    implementation("com.google.mlkit:barcode-scanning:17.3.0")
 
     // Gson for serialization
     implementation("com.google.code.gson:gson:2.10.1")

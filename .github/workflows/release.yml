@@ -46,26 +46,6 @@ jobs:
           RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
         run: ./gradlew assembleFossRelease
 
-      - name: Sign APKs (GitHub)
-        uses: r0adkll/sign-android-release@v1
-        id: sign_github
-        with:
-          releaseDirectory: app/build/outputs/apk/github/release
-          signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
-          alias: ${{ secrets.RELEASE_KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.RELEASE_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.RELEASE_KEY_PASSWORD }}
-
-      - name: Sign APKs (FOSS)
-        uses: r0adkll/sign-android-release@v1
-        id: sign_foss
-        with:
-          releaseDirectory: app/build/outputs/apk/foss/release
-          signingKeyBase64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
-          alias: ${{ secrets.RELEASE_KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.RELEASE_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.RELEASE_KEY_PASSWORD }}
-
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -74,7 +54,7 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ${{ steps.sign_github.outputs.signedReleaseFile }}
-            ${{ steps.sign_foss.outputs.signedReleaseFile }}
+            app/build/outputs/apk/github/release/app-github-release.apk
+            app/build/outputs/apk/foss/release/app-foss-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -25,7 +25,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APKs
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleGithubDebug assembleFossDebug
 
       - name: Run Lint
-        run: ./gradlew lintDebug
+        run: ./gradlew lintGithubDebug

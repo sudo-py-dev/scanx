@@ -42,6 +42,11 @@ android {
             // applicationIdSuffix = ".play"
             versionNameSuffix = "-play"
         }
+        create("github") {
+            dimension = "distribution"
+            applicationIdSuffix = ".github"
+            versionNameSuffix = "-github"
+        }
         create("foss") {
             dimension = "distribution"
             applicationIdSuffix = ".foss"
@@ -101,8 +106,9 @@ dependencies {
     implementation("androidx.camera:camera-view:$cameraxVersion")
 
     // ML Kit Barcode Scanning
-    // Play Services version for Google Play (smaller)
+    // Play Services version for Google Play & GitHub (smaller)
     "googlePlayImplementation"("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0")
+    "githubImplementation"("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0")
     // Independent/Bundled version for FOSS (works without Play Services)
     "fossImplementation"("com.google.mlkit:barcode-scanning:17.3.0")
 

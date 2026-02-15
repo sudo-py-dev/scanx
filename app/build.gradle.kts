@@ -35,6 +35,20 @@ android {
         }
     }
 
+    flavorDimensions += "distribution"
+    productFlavors {
+        create("googlePlay") {
+            dimension = "distribution"
+            applicationIdSuffix = ".play"
+            versionNameSuffix = "-play"
+        }
+        create("foss") {
+            dimension = "distribution"
+            applicationIdSuffix = ".foss"
+            versionNameSuffix = "-foss"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -64,8 +78,8 @@ android {
     packaging {
         jniLibs {
             useLegacyPackaging = false
-            doNotStrip("**/libbarhopper_v3.so")
-            doNotStrip("**/libimage_processing_util_jni.so")
+            keepDebugSymbols.add("**/libbarhopper_v3.so")
+            keepDebugSymbols.add("**/libimage_processing_util_jni.so")
         }
     }
 
@@ -86,8 +100,11 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
     implementation("androidx.camera:camera-view:$cameraxVersion")
 
-    // ML Kit Barcode Scanning (Independent/Bundled - works without Play Services)
-    implementation("com.google.mlkit:barcode-scanning:17.3.0")
+    // ML Kit Barcode Scanning
+    // Play Services version for Google Play (smaller)
+    "googlePlayImplementation"("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0")
+    // Independent/Bundled version for FOSS (works without Play Services)
+    "fossImplementation"("com.google.mlkit:barcode-scanning:17.3.0")
 
     // Gson for serialization
     implementation("com.google.code.gson:gson:2.10.1")

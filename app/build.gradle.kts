@@ -39,7 +39,7 @@ android {
     productFlavors {
         create("googlePlay") {
             dimension = "distribution"
-            applicationIdSuffix = ".play"
+            // applicationIdSuffix = ".play"
             versionNameSuffix = "-play"
         }
         create("foss") {
